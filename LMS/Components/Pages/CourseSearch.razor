@@ -1,0 +1,102 @@
+﻿@page "/course-search/{SelectedTerm}"
+@inject NavigationManager NavManager
+
+<h2>Enter Your Search Criteria</h2>
+
+<div class="search-container">
+    <div class="search-header">
+        <span>Term: @SelectedTerm</span>
+    </div>
+    <div class="search-body">
+        <label>
+            Keyword
+            <input type="text" @bind="Keyword" />
+        </label>
+        <label>
+            Course
+            <input type="text" @bind="CourseCode" />
+        </label>
+        <label>
+            <input type="checkbox" @bind="OnlyShowAvailable" />
+            Available Seats
+        </label>
+    </div>
+    <div class="search-actions">
+        <button @onclick="SearchCourses">Search</button>
+        <button @onclick="ClearSearch">Clear</button>
+        <button @onclick="AdvancedSearch">Advanced Search</button>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string SelectedTerm { get; set; }
+
+    private string Keyword { get; set; }
+    private string CourseCode { get; set; }
+    private bool OnlyShowAvailable { get; set; }
+
+    private void SearchCourses()
+    {
+        // Implement your search logic here
+    }
+
+    private void ClearSearch()
+    {
+        Keyword = string.Empty;
+        CourseCode = string.Empty;
+        OnlyShowAvailable = false;
+    }
+
+    private void AdvancedSearch()
+    {
+        // Implement your advanced search logic here
+    }
+}
+
+<style>
+    .search-container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .search-header {
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .search-body label {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .search-body input[type="text"] {
+        width: calc(100% - 20px);
+        padding: 8px 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .search-body input[type="checkbox"] {
+        margin-right: 5px;
+    }
+
+    .search-actions button {
+        padding: 10px 20px;
+        margin-right: 10px;
+        border: 1px solid #007bff;
+        background-color: #007bff;
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .search-actions button:hover {
+        background-color: #0056b3;
+    }
+</style>

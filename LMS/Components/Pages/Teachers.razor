@@ -1,0 +1,113 @@
+﻿@page "/teachers"
+
+<h3>Teachers' Information</h3>
+
+@if (teachers.Any())
+{
+    foreach (var teacher in teachers)
+    {
+        <div>
+            <h4>@teacher.Name</h4>
+            <p>Email: @teacher.Email</p>
+            <p>Average Rating: @teacher.AverageRating</p>
+            <h5>Teaching History</h5>
+            @if (teacher.TeachingHistory.Any())
+            {
+                <ul>
+                    @foreach (var assignment in teacher.TeachingHistory)
+                    {
+                        <li>@assignment.CourseName - @assignment.Year (@assignment.Semester)</li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>No teaching history available.</p>
+            }
+        </div>
+    }
+}
+else
+{
+    <p>No teachers available.</p>
+}
+
+@code {
+    private List<Teacher> teachers = new List<Teacher>
+    {
+        new Teacher
+        {
+            Name = "Mr. Smith",
+            Email = "mr.smith@gmail.com",
+            AverageRating = 4.3,
+            TeachingHistory = new List<TeachingAssignment>
+            {
+                new TeachingAssignment { CourseName = "OOP2", Year = 2021, Semester = "Fall" },
+                new TeachingAssignment { CourseName = "Software Analysis", Year = 2022, Semester = "Spring" }
+            }
+        },
+        new Teacher
+        {
+            Name = "Ms. Johnson",
+            Email = "ms.johnson@gmail.com",
+            AverageRating = 4.7,
+            TeachingHistory = new List<TeachingAssignment>
+            {
+                new TeachingAssignment { CourseName = "Database Administration", Year = 2020, Semester = "Spring" },
+                new TeachingAssignment { CourseName = "User Experience", Year = 2021, Semester = "Fall" }
+            }
+        },
+        // Add the rest of the teachers here following the same structure
+
+        new Teacher
+        {
+            Name = "Mrs. Brown",
+            Email = "mrs.brown@gmail.com",
+            AverageRating = 4.5,
+            TeachingHistory = new List<TeachingAssignment>
+            {
+                new TeachingAssignment { CourseName = "User Experience", Year = 2019, Semester = "Fall" },
+                new TeachingAssignment { CourseName = "Critical Thinking", Year = 2020, Semester = "Spring" }
+            }
+        },
+        new Teacher
+        {
+            Name = "Mr. Jones",
+            Email = "mr.jones@gmail.com",
+            AverageRating = 4.8,
+            TeachingHistory = new List<TeachingAssignment>
+            {
+                new TeachingAssignment { CourseName = "English Literature", Year = 2022, Semester = "Spring" },
+                new TeachingAssignment { CourseName = "Creative Writing", Year = 2023, Semester = "Fall" }
+            }
+        },
+        new Teacher
+        {
+            Name = "Ms. Miller",
+            Email = "ms.miller@gmail.com",
+            AverageRating = 4.4,
+            TeachingHistory = new List<TeachingAssignment>
+            {
+                new TeachingAssignment { CourseName = "Chemistry 101", Year = 2021, Semester = "Spring" },
+                new TeachingAssignment { CourseName = "Organic Chemistry", Year = 2022, Semester = "Fall" }
+            }
+        }
+    };
+
+
+
+    public class Teacher
+    {
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public List<TeachingAssignment> TeachingHistory { get; set; } = new List<TeachingAssignment>();
+        public double AverageRating { get; set; }
+    }
+
+    public class TeachingAssignment
+    {
+        public string CourseName { get; set; }
+        public int Year { get; set; }
+        public string Semester { get; set; }
+    }
+}
