@@ -1,0 +1,64 @@
+﻿@page "/student-login"
+@inject NavigationManager NavManager
+@inject AuthService AuthServ
+@using Microsoft.AspNetCore.Components.Forms
+@using System.ComponentModel.DataAnnotations
+@using LMS.Models 
+@using LMS
+@using LMS.Services
+@inject AuthService AuthServ
+
+<h2>Student Login</h2>
+
+
+@* Initialize errorMessage with an empty string to satisfy non-nullable requirement *@
+@{
+    string errorMessage = "";
+}
+
+
+@if (!string.IsNullOrEmpty(errorMessage))
+{
+    <p>@errorMessage</p>
+
+}
+
+<EditForm Model="@studentLoginModel" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <InputText id="username" @bind-Value="@studentLoginModel.Email" class="form-control" />
+        <ValidationMessage For="@(() => studentLoginModel.Email)" />
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <InputText @bind-Value="@studentLoginModel.Password" class="form-control" />
+        <ValidationMessage For="@(() => studentLoginModel.Password)" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Login</button>
+</EditForm>
+
+
+
+@code {
+    private LMS.Models.StudentLoginModel studentLoginModel = new LMS.Models.StudentLoginModel(); // Use the correct namespace
+
+    private string? errorMessage;
+
+    private async Task HandleValidSubmit()
+    {
+        bool loginSuccess = await AuthServ.StudentLoginAsync(studentLoginModel);
+
+        if (loginSuccess)
+        {
+            NavManager.NavigateTo("/student-dashboard"); // Redirect to student dashboard after successful login
+        }
+        else
+        {
+            errorMessage = "Invalid username or password.";
+        }
+    }
+}

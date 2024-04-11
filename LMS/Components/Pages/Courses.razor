@@ -1,0 +1,71 @@
+﻿@page "/courses"
+@inject NavigationManager NavManager
+
+<h2>Select a Term</h2>
+
+<p>Terms Open for Registration (Please read the important notice to students regarding Covid-19.)</p>
+
+<div class="term-selection">
+    <select @bind="selectedTerm">
+        <option value="">Select a term...</option>
+        @foreach (var term in terms)
+        {
+            <option value="@term">@term</option>
+        }
+    </select>
+
+    <button @onclick="Continue">Continue</button>
+</div>
+
+
+
+
+@code {
+    private string selectedTerm;
+    private List<string> terms = new List<string>
+    {
+        "Spring 2024",
+        "Fall 2024",
+        "Winter 2025"
+        // Add more terms as needed
+    };
+
+    private void Continue()
+    {
+        if (!string.IsNullOrWhiteSpace(selectedTerm))
+        {
+            NavManager.NavigateTo($"/course-search/{Uri.EscapeDataString(selectedTerm)}");
+        }
+    }
+
+}
+
+<style>
+    .term-selection {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+        .term-selection select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .term-selection button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+            .term-selection button:hover {
+                background-color: #45a049;
+            }
+</style>

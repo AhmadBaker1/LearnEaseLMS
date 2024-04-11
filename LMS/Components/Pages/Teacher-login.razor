@@ -1,0 +1,59 @@
+﻿@page "/teacher-login"
+@inject NavigationManager NavManager
+@using LMS.Services
+@inject AuthService AuthServ
+@using Microsoft.AspNetCore.Components.Forms
+@using System.ComponentModel.DataAnnotations
+@using LMS.Models
+@using LMS
+
+<h2>Teacher Login</h2>
+
+
+@{
+    string errorMessage = "";
+}
+
+@if (!string.IsNullOrEmpty(errorMessage))
+{
+    <p>@errorMessage</p>
+}
+
+<EditForm Model="@teacherLoginModel" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <InputText id="username" @bind-Value="@teacherLoginModel.Email" class="form-control" />
+        <ValidationMessage For="@(() => teacherLoginModel.Email)" />
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <InputText @bind-Value="@teacherLoginModel.Password" class="form-control" />
+        <ValidationMessage For="@(() => teacherLoginModel.Password)" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Login</button>
+</EditForm>
+
+@code {
+
+    private LMS.Models.TeacherLoginModel teacherLoginModel = new LMS.Models.TeacherLoginModel(); // Fully qualify the type
+    private string? errorMessage;
+
+    private async Task HandleValidSubmit()
+    {
+        bool loginSuccess = await AuthServ.TeacherLoginAsync(teacherLoginModel);
+
+        if (loginSuccess)
+        {
+            NavManager.NavigateTo("/teacher-dashboard"); // Redirect to teacher dashboard after successful login
+        }
+        else
+        {
+            errorMessage = "Invalid username or password.";
+        }
+    }
+}
