@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ahmad Baker\\Downloads\\LMS\\LMS.csproj": {}
+    "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\LMS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ahmad Baker\\Downloads\\LMS\\LMS.csproj": {
+    "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\LMS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ahmad Baker\\Downloads\\LMS\\LMS.csproj",
+        "projectUniqueName": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\LMS.csproj",
         "projectName": "LMS",
-        "projectPath": "C:\\Users\\Ahmad Baker\\Downloads\\LMS\\LMS.csproj",
+        "projectPath": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\LMS.csproj",
         "packagesPath": "C:\\Users\\Ahmad Baker\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ahmad Baker\\Downloads\\LMS\\obj\\",
+        "outputPath": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [

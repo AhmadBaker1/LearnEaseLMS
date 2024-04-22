@@ -1,27 +1,27 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Ahmad Baker\\Downloads\\LMS\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\LMS.styles.css",
+      "Id": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\LMS.styles.css",
       "PackagePath": "staticwebassets\\LMS.styles.css"
     },
     {
-      "Id": "C:\\Users\\Ahmad Baker\\Downloads\\LMS\\wwwroot\\css\\app.css",
+      "Id": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "C:\\Users\\Ahmad Baker\\Downloads\\LMS\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Id": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\Ahmad Baker\\Downloads\\LMS\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Ahmad Baker\\Downloads\\LMS\\wwwroot\\favicon.png",
+      "Id": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\Ahmad Baker\\Downloads\\LMS\\wwwroot\\index.html",
+      "Id": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {

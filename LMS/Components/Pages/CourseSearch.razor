@@ -9,10 +9,6 @@
     </div>
     <div class="search-body">
         <label>
-            Keyword
-            <input type="text" @bind="Keyword" />
-        </label>
-        <label>
             Course
             <input type="text" @bind="CourseCode" />
         </label>
@@ -24,35 +20,107 @@
     <div class="search-actions">
         <button @onclick="SearchCourses">Search</button>
         <button @onclick="ClearSearch">Clear</button>
-        <button @onclick="AdvancedSearch">Advanced Search</button>
     </div>
+    @if (TeachersInformation != null && TeachersInformation.Any())
+    {
+        <div>
+            <h3>Teachers' Information</h3>
+            @foreach (var teacher in TeachersInformation)
+            {
+                <h2 style="font-weight: bold;">Block @teacher.Block</h2>
+                <p>@teacher.Name</p>
+                <p>Email: @teacher.Email</p>
+                <p>Average Rating: @teacher.AverageRating</p>
+                <p>Teaching: @teacher.CourseName</p>
+                <hr />
+            }
+        </div>
+    }
 </div>
 
 @code {
     [Parameter]
     public string SelectedTerm { get; set; }
 
-    private string Keyword { get; set; }
     private string CourseCode { get; set; }
     private bool OnlyShowAvailable { get; set; }
+    private List<Teacher> TeachersInformation { get; set; }
 
     private void SearchCourses()
     {
-        // Implement your search logic here
+        // Clear any existing information
+        TeachersInformation = null;
+
+        if (!string.IsNullOrWhiteSpace(CourseCode) && CourseCode.ToLower().Contains("oop"))
+        {
+            // Populate the list with teachers' information for OOP course, assigning them to blocks
+            TeachersInformation = new List<Teacher>
+            {
+                new Teacher { Name = "Ms. Johnson", Email = "ms.johnson@gmail.com", AverageRating = 4.7, CourseName = "Object-Oriented Programming (OOP2)", Block = "A" },
+                new Teacher { Name = "Mrs. Brown", Email = "mrs.brown@gmail.com", AverageRating = 4.5, CourseName = "Object-Oriented Programming (OOP2)", Block = "B" },
+                new Teacher { Name = "Mr. Jones", Email = "mr.jones@gmail.com", AverageRating = 4.8, CourseName = "Object-Oriented Programming (OOP2)", Block = "C" },
+                new Teacher { Name = "Ms. Miller", Email = "ms.miller@gmail.com", AverageRating = 4.4, CourseName = "Object-Oriented Programming (OOP2)", Block = "D" }
+                // Add additional teachers as needed
+            };
+        }
+        else if (CourseCode.ToLower().Equals("cpsy-202"))
+        {
+            // Populate the list with teachers' information for CPSY-202 course, assigning them to blocks
+            TeachersInformation = new List<Teacher>
+                {
+                    new Teacher { Name = "Ms. Sadaf", Email = "ms.Sadaf@gmail.com", AverageRating = 4.7, CourseName = "User Experience and Design (CPSY-202)", Block = "A" },
+                    new Teacher { Name = "Mrs. Abdur", Email = "mrs.Abdur@gmail.com", AverageRating = 4.5, CourseName = "User Experience and Design (CPSY-202)", Block = "B" },
+                    new Teacher { Name = "Mr. Ramin", Email = "mr.Ramin@gmail.com", AverageRating = 4.8, CourseName = "User Experience and Design (CPSY-202)", Block = "C" },
+                    new Teacher { Name = "Ms. Ahmad", Email = "ms.Ahmad@gmail.com", AverageRating = 4.4, CourseName = "User Experience and Design (CPSY-202)", Block = "D" }
+                };
+
+        }
+        else if (CourseCode.ToLower().Equals("cprg-250"))
+        {
+            // Populate the list with teachers' information for CPRG-250 course, assigning them to blocks
+            TeachersInformation = new List<Teacher>
+                {
+                    new Teacher { Name = "Ms. Ali", Email = "ms.johnson@gmail.com", AverageRating = 4.7, CourseName = "Database Design and Programming (CPRG-250)", Block = "A" },
+                    new Teacher { Name = "Mrs. Karam", Email = "mrs.brown@gmail.com", AverageRating = 4.5, CourseName = "Database Design and Programming (CPRG-250)", Block = "B" },
+                    new Teacher { Name = "Mr. Jones", Email = "mr.jones@gmail.com", AverageRating = 4.8, CourseName = "Database Design and Programming (CPRG-250)", Block = "C" },
+                    new Teacher { Name = "Ms. Miller", Email = "ms.miller@gmail.com", AverageRating = 4.4, CourseName = "Database Design and Programming (CPRG-250)", Block = "D" }
+                };
+        }
+
+        else if (CourseCode.ToLower().Equals("phil-241"))
+        {
+            // Populate the list with teachers' information for CPRG-250 course, assigning them to blocks
+            TeachersInformation = new List<Teacher>
+                {
+                    new Teacher { Name = "Ms. Johnson", Email = "ms.johnson@gmail.com", AverageRating = 4.7, CourseName = "Database Design and Programming (CPRG-250)", Block = "A" },
+                    new Teacher { Name = "Mrs. Brown", Email = "mrs.brown@gmail.com", AverageRating = 4.5, CourseName = "Database Design and Programming (CPRG-250)", Block = "B" },
+                    new Teacher { Name = "Mr. Jones", Email = "mr.jones@gmail.com", AverageRating = 4.8, CourseName = "Database Design and Programming (CPRG-250)", Block = "C" },
+                    new Teacher { Name = "Ms. Miller", Email = "ms.miller@gmail.com", AverageRating = 4.4, CourseName = "Database Design and Programming (CPRG-250)", Block = "D" }
+                };
+        }
     }
 
     private void ClearSearch()
     {
-        Keyword = string.Empty;
         CourseCode = string.Empty;
         OnlyShowAvailable = false;
+        TeachersInformation = null;
     }
 
-    private void AdvancedSearch()
+    private class Teacher
     {
-        // Implement your advanced search logic here
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public double AverageRating { get; set; }
+        public string CourseName { get; set; }
+        public string Block { get; set; } // Added block property
     }
 }
+
+<style>
+    /* Styles unchanged */
+</style>
+
 
 <style>
     .search-container {
@@ -96,7 +164,7 @@
         cursor: pointer;
     }
 
-    .search-actions button:hover {
-        background-color: #0056b3;
-    }
+        .search-actions button:hover {
+            background-color: #0056b3;
+        }
 </style>
