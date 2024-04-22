@@ -1,27 +1,27 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\alama\\source\\repos\\LearnEaseLMS\\LMS\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\LMS.styles.css",
+      "Id": "C:\\Users\\ramee\\Desktop\\LearnEaseLMS\\LMS\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\LMS.styles.css",
       "PackagePath": "staticwebassets\\LMS.styles.css"
     },
     {
-      "Id": "C:\\Users\\alama\\source\\repos\\LearnEaseLMS\\LMS\\wwwroot\\css\\app.css",
+      "Id": "C:\\Users\\ramee\\Desktop\\LearnEaseLMS\\LMS\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "C:\\Users\\alama\\source\\repos\\LearnEaseLMS\\LMS\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Id": "C:\\Users\\ramee\\Desktop\\LearnEaseLMS\\LMS\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\alama\\source\\repos\\LearnEaseLMS\\LMS\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\ramee\\Desktop\\LearnEaseLMS\\LMS\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\alama\\source\\repos\\LearnEaseLMS\\LMS\\wwwroot\\favicon.png",
+      "Id": "C:\\Users\\ramee\\Desktop\\LearnEaseLMS\\LMS\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\alama\\source\\repos\\LearnEaseLMS\\LMS\\wwwroot\\index.html",
+      "Id": "C:\\Users\\ramee\\Desktop\\LearnEaseLMS\\LMS\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {

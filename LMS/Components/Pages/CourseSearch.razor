@@ -38,8 +38,30 @@
 
     private void SearchCourses()
     {
-        // Implement your search logic here
+        if (Keyword != null && Keyword.ToLower().Contains("oop"))
+        {
+            // Display the teachers' information
+            // This is a simplified example, you should replace this with your actual display logic
+            // For simplicity, I'm just showing a message here
+            string teachersInformation = @"
+            Teachers' Information
+            Mr. Smith
+            Email: mr.smith@gmail.com
+
+            Average Rating: 4.3
+
+            Teaching History
+            Object-Oriented Programming (OOP2)";
+
+            // Display the information (you should replace this with your actual display logic)
+            Console.WriteLine(teachersInformation);
+        }
+        else
+        {
+            // Perform your regular search logic here
+        }
     }
+}
 
     private void ClearSearch()
     {
@@ -96,7 +118,7 @@
         cursor: pointer;
     }
 
-    .search-actions button:hover {
-        background-color: #0056b3;
-    }
+        .search-actions button:hover {
+            background-color: #0056b3;
+        }
 </style>
