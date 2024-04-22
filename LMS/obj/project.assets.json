@@ -45058,24 +45058,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ahmad Baker\\.nuget\\packages\\": {},
+    "C:\\Users\\ramee\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ahmad Baker\\Downloads\\LMS\\LMS.csproj",
+      "projectUniqueName": "C:\\Users\\ramee\\Documents\\LMS\\LMS\\LMS.csproj",
       "projectName": "LMS",
-      "projectPath": "C:\\Users\\Ahmad Baker\\Downloads\\LMS\\LMS.csproj",
-      "packagesPath": "C:\\Users\\Ahmad Baker\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ahmad Baker\\Downloads\\LMS\\obj\\",
+      "projectPath": "C:\\Users\\ramee\\Documents\\LMS\\LMS\\LMS.csproj",
+      "packagesPath": "C:\\Users\\ramee\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ramee\\Documents\\LMS\\LMS\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Ahmad Baker\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ramee\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -45112,11 +45112,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
