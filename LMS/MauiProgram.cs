@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using LMS.Models;
 
 namespace LMS
 {
@@ -20,6 +21,8 @@ namespace LMS
     		builder.Services.AddBlazorWebViewDeveloperTools();
     		builder.Logging.AddDebug();
 #endif
+
+           
 
             return builder.Build();
         }

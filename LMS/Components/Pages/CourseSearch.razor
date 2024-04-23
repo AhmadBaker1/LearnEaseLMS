@@ -21,21 +21,28 @@
         <button @onclick="SearchCourses">Search</button>
         <button @onclick="ClearSearch">Clear</button>
     </div>
+    
     @if (TeachersInformation != null && TeachersInformation.Any())
     {
         <div>
             <h3>Teachers' Information</h3>
             @foreach (var teacher in TeachersInformation)
             {
-                <h2 style="font-weight: bold;">Block @teacher.Block</h2>
-                <p>@teacher.Name</p>
-                <p>Email: @teacher.Email</p>
-                <p>Average Rating: @teacher.AverageRating</p>
-                <p>Teaching: @teacher.CourseName</p>
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+                    <div>
+                        <h2 style="font-weight: bold;">Block @teacher.Block</h2>
+                        <p>@teacher.Name</p>
+                        <p>Email: @teacher.Email</p>
+                        <p>Average Rating: @teacher.AverageRating</p>
+                        <p>Teaching: @teacher.CourseName</p>
+                    </div>
+                    <button @onclick="() => AddTeacher(teacher)">Add to Course</button>
+                </div>
                 <hr />
             }
         </div>
     }
+
 </div>
 
 @code {
@@ -45,6 +52,11 @@
     private string CourseCode { get; set; }
     private bool OnlyShowAvailable { get; set; }
     private List<Teacher> TeachersInformation { get; set; }
+
+    private void AddTeacher(Teacher teacher)
+    {
+        NavManager.NavigateTo($"/Registration?selectedCourse={teacher.CourseName}");
+    }
 
     private void SearchCourses()
     {
@@ -92,10 +104,21 @@
             // Populate the list with teachers' information for CPRG-250 course, assigning them to blocks
             TeachersInformation = new List<Teacher>
                 {
-                    new Teacher { Name = "Ms. Johnson", Email = "ms.johnson@gmail.com", AverageRating = 4.7, CourseName = "Database Design and Programming (CPRG-250)", Block = "A" },
-                    new Teacher { Name = "Mrs. Brown", Email = "mrs.brown@gmail.com", AverageRating = 4.5, CourseName = "Database Design and Programming (CPRG-250)", Block = "B" },
-                    new Teacher { Name = "Mr. Jones", Email = "mr.jones@gmail.com", AverageRating = 4.8, CourseName = "Database Design and Programming (CPRG-250)", Block = "C" },
-                    new Teacher { Name = "Ms. Miller", Email = "ms.miller@gmail.com", AverageRating = 4.4, CourseName = "Database Design and Programming (CPRG-250)", Block = "D" }
+                    new Teacher { Name = "Ms. Johnson", Email = "ms.johnson@gmail.com", AverageRating = 4.7, CourseName = "Critical Thinking (PHIL-241)", Block = "A" },
+                    new Teacher { Name = "Mrs. Brown", Email = "mrs.brown@gmail.com", AverageRating = 4.5, CourseName = "Critical Thinking (PHIL-241)", Block = "B" },
+                    new Teacher { Name = "Mr. Jones", Email = "mr.jones@gmail.com", AverageRating = 4.8, CourseName = "Critical Thinking (PHIL-241)", Block = "C" },
+                    new Teacher { Name = "Ms. Miller", Email = "ms.miller@gmail.com", AverageRating = 4.4, CourseName = "Critical Thinking (PHIL-241)", Block = "D" }
+                };
+        }
+        else if (CourseCode.ToLower().Equals("cpsy-200"))
+        {
+            // Populate the list with teachers' information for CPRG-250 course, assigning them to blocks
+            TeachersInformation = new List<Teacher>
+                {
+                    new Teacher { Name = "Ms. Johnson", Email = "ms.johnson@gmail.com", AverageRating = 4.7, CourseName = "Software Analysis and Design (CPSY-200)", Block = "A" },
+                    new Teacher { Name = "Mrs. Brown", Email = "mrs.brown@gmail.com", AverageRating = 4.5, CourseName = "Software Analysis and Design (CPSY-200)", Block = "B" },
+                    new Teacher { Name = "Mr. Jones", Email = "mr.jones@gmail.com", AverageRating = 4.8, CourseName = "Software Analysis and Design (CPSY-200)", Block = "C" },
+                    new Teacher { Name = "Ms. Miller", Email = "ms.miller@gmail.com", AverageRating = 4.4, CourseName = "Software Analysis and Design (CPSY-200)", Block = "D" }
                 };
         }
     }
@@ -164,7 +187,7 @@
         cursor: pointer;
     }
 
-        .search-actions button:hover {
-            background-color: #0056b3;
-        }
+    .search-actions button:hover {
+        background-color: #0056b3;
+    }
 </style>

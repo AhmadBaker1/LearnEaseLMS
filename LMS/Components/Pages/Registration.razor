@@ -1,0 +1,106 @@
+﻿@page "/Registration"
+@inject NavigationManager NavManager
+
+<h1>Class Schedule</h1>
+
+<p>Selected Term: @SelectedTerm</p>
+<p>Selected Course: @SelectedCourse</p>
+
+<div>
+    <label for="termSelect">Term:</label>
+    <select id="termSelect" @bind="SelectedTerm">
+        <option value="Spring 2024">Spring 2024</option>
+        <option value="Fall 2024">Fall 2024</option>
+        <option value="Winter 2024">Winter 2025</option>
+        <!-- Add more term options here -->
+    </select>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Details</th>
+            <th>Hours</th>
+            <th>CRN</th>
+            <!-- Add more headers as needed -->
+            <th>Status</th>
+            <th>Message</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var course in Courses)
+        {
+            <tr>
+                <td>@course.Title</td>
+                <td>@course.Details</td>
+                <td>@course.Hours</td>
+                <td>@course.CRN</td>
+                <!-- Add more course details as needed -->
+                <td>@course.Status</td>
+                <td>@course.Message</td>
+                <td>
+    @if (course.IsRegistered)
+    {
+        <button style="background-color: green; color: white;" disabled>Registered</button>
+    }
+    else
+    {
+        <button @onclick="() => Register(course)">Register</button>
+    }
+</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    private string SelectedTerm { get; set; }
+    private string SelectedCourse { get; set; }
+    private List<Course> Courses { get; set; } = new List<Course>(); // Populate this list from your data source
+
+    protected override void OnInitialized()
+    {
+        // Retrieve selectedCourse query parameter from the URL
+        var uri = new Uri(NavManager.Uri);
+        var query = System.Web.HttpUtility.ParseQueryString(uri.Query);
+        SelectedCourse = query["selectedCourse"];
+
+        // Fetch course data based on SelectedTerm and SelectedCourse
+        // You would typically call a service to get the course data
+        // Here, I'm just initializing the Courses list with a single course for demonstration
+        Courses = new List<Course>
+        {
+            new Course
+            {
+                Title = "Object-Oriented Programming",
+                Details = "Learn the principles of object-oriented programming",
+                Hours = 3,
+                CRN = "12345",
+                Status = "Open",
+                Message = ""
+            }
+        };
+    }
+
+    private void Register(Course course)
+    {
+        // Your registration logic here...
+        course.IsRegistered = true;
+        // You might need to call StateHasChanged() if the UI does not update
+        StateHasChanged();
+    }
+
+    public class Course
+    {
+        public string Title { get; set; }
+        public string Details { get; set; }
+        public int Hours { get; set; }
+        public string CRN { get; set; }
+        public string Status { get; set; }
+        public string Message { get; set; }
+        public bool IsRegistered { get; set; } // Add this property
+                                               // Add more properties as required
+    }
+}
