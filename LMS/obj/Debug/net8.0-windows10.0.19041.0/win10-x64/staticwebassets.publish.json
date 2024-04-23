@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "aPUbXvPQ+ZmHns6OLJjSJHf6YRn9zWdXpsCZeUxH+Qk=",
+  "Hash": "bH0FBkn4TF3d+yHMdCknmXUM3QVc/SQjtALfsn/wCIE=",
   "Source": "LMS",
   "BasePath": "/",
   "Mode": "Root",
@@ -129,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\wwwroot\\images\\logo.png",
+      "SourceId": "LMS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "images/logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\logo.png"
     },
     {
       "Identity": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\wwwroot\\index.html",

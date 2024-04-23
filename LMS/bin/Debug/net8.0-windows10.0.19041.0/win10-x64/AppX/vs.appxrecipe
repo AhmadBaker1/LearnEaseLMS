@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Ahmad Baker\OneDrive\Desktop\LearnEaseLMS\LMS\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-04-23T01:36:10.451</Modified>
+      <Modified>2024-04-23T06:02:03.604</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Ahmad Baker\OneDrive\Desktop\LearnEaseLMS\LMS\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-04-23T01:35:42.310</Modified>
+      <Modified>2024-04-23T05:36:12.873</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ahmad Baker\OneDrive\Desktop\LearnEaseLMS\LMS\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\LMS.runtimeconfig.json">
       <PackagePath>LMS.runtimeconfig.json</PackagePath>
@@ -44,11 +44,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ahmad Baker\OneDrive\Desktop\LearnEaseLMS\LMS\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\LMS.dll">
       <PackagePath>LMS.dll</PackagePath>
-      <Modified>2024-04-23T01:36:10.107</Modified>
+      <Modified>2024-04-23T06:02:02.513</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ahmad Baker\OneDrive\Desktop\LearnEaseLMS\LMS\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>LMS.exe</PackagePath>
-      <Modified>2024-04-23T01:36:10.123</Modified>
+      <Modified>2024-04-23T06:02:02.544</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ahmad Baker\OneDrive\Desktop\LearnEaseLMS\LMS\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -69,6 +69,10 @@
     <AppxPackagedFile Include="C:\Users\Ahmad Baker\OneDrive\Desktop\LearnEaseLMS\LMS\wwwroot\favicon.png">
       <PackagePath>wwwroot\favicon.png</PackagePath>
       <Modified>2024-04-22T21:52:27.702</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ahmad Baker\OneDrive\Desktop\LearnEaseLMS\LMS\wwwroot\images\logo.png">
+      <PackagePath>wwwroot\images\logo.png</PackagePath>
+      <Modified>2024-04-23T05:30:48.953</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ahmad Baker\OneDrive\Desktop\LearnEaseLMS\LMS\wwwroot\index.html">
       <PackagePath>wwwroot\index.html</PackagePath>

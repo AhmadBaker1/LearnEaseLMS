@@ -1,36 +1,40 @@
 ﻿@page "/teachers"
 
-<h3>Teachers' Information</h3>
+<div class="teachers-container">
+    <h3 class="teachers-title">Teachers' Information</h3>
 
-@if (teachers.Any())
-{
-    foreach (var teacher in teachers)
+    @if (teachers.Any())
     {
-        <div>
-            <h4>@teacher.Name</h4>
-            <p>Email: @teacher.Email</p>
-            <p>Average Rating: @teacher.AverageRating</p>
-            <h5>Teaching History</h5>
-            @if (teacher.TeachingHistory.Any())
+        <div class="teacher-cards">
+            @foreach (var teacher in teachers)
             {
-                <ul>
-                    @foreach (var assignment in teacher.TeachingHistory)
+                <div class="teacher-card">
+                    <h4 class="teacher-name">@teacher.Name</h4>
+                    <p class="teacher-email">Email: @teacher.Email</p>
+                    <p class="teacher-rating">Average Rating: @teacher.AverageRating</p>
+                    <h5 class="teaching-history-title">Teaching History</h5>
+                    @if (teacher.TeachingHistory.Any())
                     {
-                        <li>@assignment.CourseName - @assignment.Year (@assignment.Semester)</li>
+                        <ul class="teaching-history-list">
+                            @foreach (var assignment in teacher.TeachingHistory)
+                            {
+                                <li class="history-item">@assignment.CourseName - @assignment.Year (@assignment.Semester)</li>
+                            }
+                        </ul>
                     }
-                </ul>
-            }
-            else
-            {
-                <p>No teaching history available.</p>
+                    else
+                    {
+                        <p class="no-history">No teaching history available.</p>
+                    }
+                </div>
             }
         </div>
     }
-}
-else
-{
-    <p>No teachers available.</p>
-}
+    else
+    {
+        <p class="no-teachers">No teachers available.</p>
+    }
+</div>
 
 @code {
     private List<Teacher> teachers = new List<Teacher>
@@ -111,3 +115,80 @@ else
         public string Semester { get; set; }
     }
 }
+
+            <style>
+    .teachers-container {
+        max-width: 900px;
+        margin: 2rem auto;
+        padding: 1rem;
+    }
+
+    .teachers-title {
+        color: #333;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .teacher-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 1rem;
+    }
+
+    .teacher-card {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .teacher-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .teacher-name {
+        color: #0056b3;
+        margin-top: 0;
+    }
+
+    .teacher-email {
+        font-size: 0.9rem;
+        color: #666;
+    }
+
+    .teacher-rating {
+        font-weight: bold;
+        color: #28a745; /* Bootstrap success color */
+    }
+
+    .teaching-history-title {
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        color: #0056b3;
+    }
+
+    .teaching-history-list {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .history-item {
+        background-color: #f8f9fa;
+        margin-bottom: 0.5rem;
+        padding: 0.5rem;
+        border-radius: 4px;
+    }
+
+    .no-history {
+        font-style: italic;
+        color: #dc3545; /* Bootstrap danger color */
+    }
+
+    .no-teachers {
+        text-align: center;
+        color: #dc3545;
+    }
+</style>

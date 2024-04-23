@@ -1,49 +1,48 @@
 ﻿@page "/course-search/{SelectedTerm}"
 @inject NavigationManager NavManager
 
-<h2>Enter Your Search Criteria</h2>
-
 <div class="search-container">
-    <div class="search-header">
-        <span>Term: @SelectedTerm</span>
+    <h2 class="search-title">Enter Your Search Criteria</h2>
+    <div class="term-display">
+        <span class="term-label">Term:</span>
+        <span class="selected-term">@SelectedTerm</span>
     </div>
-    <div class="search-body">
-        <label>
-            Course
-            <input type="text" @bind="CourseCode" />
-        </label>
-        <label>
-            <input type="checkbox" @bind="OnlyShowAvailable" />
-            Available Seats
-        </label>
+    <div class="search-fields">
+        <div class="input-group">
+            <label for="courseInput">Course</label>
+            <input id="courseInput" type="text" @bind="CourseCode" placeholder="Enter a course code..." />
+        </div>
+        <div class="checkbox-group">
+            <input id="availableSeatsCheckbox" type="checkbox" @bind="OnlyShowAvailable" />
+            <label for="availableSeatsCheckbox">Available Seats</label>
+        </div>
     </div>
     <div class="search-actions">
-        <button @onclick="SearchCourses">Search</button>
-        <button @onclick="ClearSearch">Clear</button>
+        <button @onclick="SearchCourses" class="search-btn">Search</button>
+        <button @onclick="ClearSearch" class="clear-btn">Clear</button>
     </div>
     
     @if (TeachersInformation != null && TeachersInformation.Any())
     {
-        <div>
-            <h3>Teachers' Information</h3>
+        <div class="teachers-info">
+            <h3 class="section-heading">Teachers' Information</h3>
             @foreach (var teacher in TeachersInformation)
             {
-                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
-                    <div>
-                        <h2 style="font-weight: bold;">Block @teacher.Block</h2>
-                        <p>@teacher.Name</p>
-                        <p>Email: @teacher.Email</p>
-                        <p>Average Rating: @teacher.AverageRating</p>
-                        <p>Teaching: @teacher.CourseName</p>
+                <div class="teacher-card">
+                    <div class="teacher-details">
+                        <h4 class="block-heading">Block @teacher.Block</h4>
+                        <p class="teacher-name">@teacher.Name</p>
+                        <p class="teacher-email">Email: @teacher.Email</p>
+                        <p class="teacher-rating">Average Rating: @teacher.AverageRating</p>
+                        <p class="course-name">Teaching: @teacher.CourseName</p>
                     </div>
-                    <button @onclick="() => AddTeacher(teacher)">Add to Course</button>
+                    <button @onclick="() => AddTeacher(teacher)" class="add-btn">Add to Course</button>
                 </div>
-                <hr />
             }
         </div>
     }
-
 </div>
+
 
 @code {
     [Parameter]
@@ -141,53 +140,135 @@
 }
 
 <style>
-    /* Styles unchanged */
-</style>
-
-
-<style>
     .search-container {
-        max-width: 600px;
-        margin: 20px auto;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
+        max-width: 800px;
+        margin: auto;
+        padding: 2rem;
+        background: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-    .search-header {
-        margin-bottom: 20px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #eee;
+    .search-title {
+        color: #5D1049; /* A deep purple */
+        margin-bottom: 1rem;
     }
 
-    .search-body label {
+    .term-display {
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .term-label {
+        font-weight: bold;
+        color: #4A4A4A;
+    }
+
+    .selected-term {
+        font-style: italic;
+        color: #888;
+    }
+
+    .search-fields {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .input-group label,
+    .checkbox-group label {
         display: block;
-        margin: 10px 0;
+        margin-bottom: 0.5rem;
     }
 
-    .search-body input[type="text"] {
-        width: calc(100% - 20px);
-        padding: 8px 10px;
-        margin-top: 5px;
+    .input-group input,
+    .checkbox-group input {
+        width: 100%;
+        padding: 0.75rem;
         border: 1px solid #ccc;
         border-radius: 4px;
     }
 
-    .search-body input[type="checkbox"] {
-        margin-right: 5px;
+    .checkbox-group {
+        display: flex;
+        align-items: center;
     }
 
-    .search-actions button {
-        padding: 10px 20px;
-        margin-right: 10px;
-        border: 1px solid #007bff;
-        background-color: #007bff;
+    .checkbox-group input {
+        margin-right: 0.5rem;
+    }
+
+    .search-actions {
+        text-align: right;
+    }
+
+    .search-btn,
+    .clear-btn {
+        padding: 0.75rem 1.5rem;
+        margin: 0 0.5rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .search-btn {
+        background-color: #4CAF50; /* Green */
         color: white;
+    }
+
+    .clear-btn {
+        background-color: #f44336; /* Red */
+        color: white;
+    }
+
+    .search-btn:hover {
+        background-color: #45a049;
+    }
+
+    .clear-btn:hover {
+        background-color: #d32f2f;
+    }
+
+    .teachers-info {
+        margin-top: 2rem;
+    }
+
+    .section-heading {
+        color: #333;
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+
+    .teacher-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        background: white;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .block-heading {
+        color: #5D1049; /* A deep purple */
+        margin-bottom: 0.5rem;
+    }
+
+    .add-btn {
+        padding: 0.5rem 1rem;
+        background-color: #007bff; /* Bootstrap blue */
+        color: white;
+        border: none;
         border-radius: 4px;
         cursor: pointer;
     }
 
-    .search-actions button:hover {
+    .add-btn:hover {
         background-color: #0056b3;
     }
 </style>

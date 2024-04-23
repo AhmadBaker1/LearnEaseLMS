@@ -1,5 +1,167 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
+@code {
+    private TimeSpan timeLeft;
+    private System.Timers.Timer timer;
+    private List<Course> featuredCourses;
 
-Welcome to your new app.
+
+    protected override void OnInitialized()
+    {
+        var semesterStartDate = DateTime.Today.AddDays(10); // Set to 10 days from now
+        timeLeft = semesterStartDate - DateTime.Now;
+
+        // Set up a timer to refresh the countdown every second
+        timer = new System.Timers.Timer(1000);
+        timer.Elapsed += TimerElapsed;
+        timer.Enabled = true;
+        timer.AutoReset = true;
+        timer.Start();
+
+        featuredCourses = new List<Course>
+        {
+            new Course
+            {
+                Title = "Object-Oriented Programming (OOP2)",
+                Description = "Learn advanced object-oriented programming concepts.",
+                // Add other properties and initialize other courses as needed.
+            },
+            // ... Initialize other featured courses
+        };
+    }
+
+    private class Course
+    {
+        public string Title { get; set; }
+        public string Description { get; set; }
+        // ... Add other properties as needed.
+    }
+
+    private void TimerElapsed(object sender, System.Timers.ElapsedEventArgs e)
+    {
+        var semesterStartDate = DateTime.Today.AddDays(10); // Ensure this date is kept updated
+        timeLeft = semesterStartDate - DateTime.Now;
+
+        // Refresh the UI
+        InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        timer?.Stop();
+        timer?.Dispose();
+    }
+
+}
+
+<div class="main-container">
+    <div class="top-row ps-3 navbar navbar-dark">
+        <a class="navbar-brand" href="/">
+            <img src="/images/logo.png" alt="Learny Logo" class="logo">
+            LMS
+        </a>
+    </div>
+    <h1 class="welcome-title">Welcome to LMS</h1>
+    <p class="welcome-subtitle">Explore courses, track your progress, and achieve your learning goals.</p>
+
+    <div class="dashboard">
+        <div class="courses-section">
+            <h2 class="section-title">Featured Courses</h2>
+            @foreach (var course in featuredCourses)
+            {
+                <div class="course-item">
+                    <h3 class="course-title">@course.Title</h3>
+                    <p class="course-description">@course.Description</p>
+                    <!-- Add more course details if needed -->
+                </div>
+            }
+        </div>
+
+        <div class="announcements-section">
+            <h2 class="section-title">Announcements</h2>
+            <div class="announcement">
+                <p>The tuition fees for the academic year 2024/25 have now been released. Check the details on your student portal.</p>
+            </div>
+        </div>
+
+        <div class="timer-section">
+            <h2 class="section-title">Spring Semester Countdown</h2>
+            <div id="countdown" class="countdown-timer">
+                <p>@timeLeft.Days days @timeLeft.Hours hours @timeLeft.Minutes minutes @timeLeft.Seconds seconds</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .main-container {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 2rem;
+        color: #333;
+    }
+
+    .top-row {
+        background-color: #563d7c; /* A nice purple */
+    }
+
+    .logo {
+        height: 100px;
+    }
+
+    .welcome-title {
+        color: #563d7c; /* Theme color */
+        margin-bottom: 0;
+    }
+
+    .welcome-subtitle {
+        color: #666;
+        font-size: 1.1rem;
+        margin-top: 0;
+    }
+
+    .dashboard {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 2rem;
+        flex-wrap: wrap; /* Wrap on smaller screens */
+    }
+
+    .section-title {
+        color: #fff;
+        background-color: #5cb85c; /* Greenish color */
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .courses-section, .announcements-section, .timer-section {
+        width: 32.5%;
+        margin-bottom: 2rem;
+    }
+
+    .course-item {
+        margin-bottom: 1rem;
+        padding: 1rem;
+        border-radius: 5px;
+        background-color: #f8f9fa; /* Light background for courses */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    }
+
+    .course-title {
+        color: #5cb85c; /* Matching the section titles */
+    }
+
+    .course-description {
+        color: #666;
+        font-size: 0.9rem;
+    }
+
+    .countdown-timer {
+        color: #fff;
+        background-color: #f0ad4e; /* Orangish color */
+        padding: 15px;
+        border-radius: 5px;
+    }
+
+    
+    }
+</style>

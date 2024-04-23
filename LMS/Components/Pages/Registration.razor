@@ -1,59 +1,67 @@
 ﻿@page "/Registration"
 @inject NavigationManager NavManager
 
-<h1>Class Schedule</h1>
+<div class="registration-container">
+    <h1 class="schedule-title">Class Schedule</h1>
 
-<p>Selected Term: @SelectedTerm</p>
-<p>Selected Course: @SelectedCourse</p>
+    <div class="selected-info">
+        <p class="selected-term"><strong>Selected Term:</strong> @SelectedTerm</p>
+        <p class="selected-course"><strong>Selected Course:</strong> @SelectedCourse</p>
+    </div>
 
-<div>
-    <label for="termSelect">Term:</label>
-    <select id="termSelect" @bind="SelectedTerm">
-        <option value="Spring 2024">Spring 2024</option>
-        <option value="Fall 2024">Fall 2024</option>
-        <option value="Winter 2024">Winter 2025</option>
-        <!-- Add more term options here -->
-    </select>
+    <div class="term-dropdown-container">
+        <label for="termSelect" class="term-label">Term:</label>
+        <select id="termSelect" @bind="SelectedTerm" class="term-dropdown">
+            <option value="Spring 2024">Spring 2024</option>
+            <option value="Fall 2024">Fall 2024</option>
+            <option value="Winter 2024">Winter 2025</option>
+            <!-- Add more term options here -->
+        </select>
+    </div>
+
+    <div class="course-table-container">
+        <table class="course-table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Details</th>
+                    <th>Hours</th>
+                    <th>CRN</th>
+                    <!-- Add more headers as needed -->
+                    <th>Status</th>
+                    <th>Message</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var course in Courses)
+                {
+                    <tr>
+                        <td>@course.Title</td>
+                        <td>@course.Details</td>
+                        <td>@course.Hours</td>
+                        <td>@course.CRN</td>
+                        <!-- Add more course details as needed -->
+                        <td>@course.Status</td>
+                        <td>@course.Message</td>
+                        <td>
+                            @if (course.IsRegistered)
+                            {
+                                <button class="btn-registered" disabled>Registered</button>
+                            }
+                            else
+                            {
+                                <button @onclick="() => Register(course)" class="btn-register">Register</button>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 </div>
 
-<table>
-    <thead>
-        <tr>
-            <th>Title</th>
-            <th>Details</th>
-            <th>Hours</th>
-            <th>CRN</th>
-            <!-- Add more headers as needed -->
-            <th>Status</th>
-            <th>Message</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var course in Courses)
-        {
-            <tr>
-                <td>@course.Title</td>
-                <td>@course.Details</td>
-                <td>@course.Hours</td>
-                <td>@course.CRN</td>
-                <!-- Add more course details as needed -->
-                <td>@course.Status</td>
-                <td>@course.Message</td>
-                <td>
-    @if (course.IsRegistered)
-    {
-        <button style="background-color: green; color: white;" disabled>Registered</button>
-    }
-    else
-    {
-        <button @onclick="() => Register(course)">Register</button>
-    }
-</td>
-            </tr>
-        }
-    </tbody>
-</table>
+
 
 @code {
     private string SelectedTerm { get; set; }
@@ -103,4 +111,94 @@
         public bool IsRegistered { get; set; } // Add this property
                                                // Add more properties as required
     }
+
+
 }
+
+<style>
+    .registration-container {
+        padding: 2rem;
+    }
+
+    .schedule-title {
+        text-align: center;
+        color: #0056b3;
+    }
+
+    .selected-info {
+        background: #e7f1ff;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .selected-term, .selected-course {
+        color: #333;
+        margin: 0;
+    }
+
+    .term-dropdown-container {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .term-label {
+        margin-right: 1rem;
+    }
+
+    .term-dropdown {
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        border: 1px solid #ced4da;
+    }
+
+    .course-table-container {
+        overflow-x: auto;
+    }
+
+    .course-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .course-table th, .course-table td {
+        padding: 0.5rem;
+        border: 1px solid #dee2e6;
+        text-align: left;
+    }
+
+    .course-table th {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .btn-registered, .btn-register {
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .btn-registered {
+        background-color: #28a745;
+        color: white;
+    }
+
+    .btn-register {
+        background-color: #dc3545;
+        color: white;
+    }
+
+    .btn-register:hover {
+        background-color: #c82333;
+    }
+
+        .btn-registered, .btn-register {
+            padding: 0.3rem 0.6rem;
+        }
+    }
+</style>
+
+
+

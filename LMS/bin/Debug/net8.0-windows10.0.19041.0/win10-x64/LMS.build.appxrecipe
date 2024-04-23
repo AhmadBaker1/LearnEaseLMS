@@ -52,6 +52,9 @@
     <AppxPackagedFile Include="C:\Users\Ahmad Baker\OneDrive\Desktop\LearnEaseLMS\LMS\wwwroot\favicon.png">
       <PackagePath>wwwroot\favicon.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ahmad Baker\OneDrive\Desktop\LearnEaseLMS\LMS\wwwroot\images\logo.png">
+      <PackagePath>wwwroot\images\logo.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ahmad Baker\OneDrive\Desktop\LearnEaseLMS\LMS\wwwroot\index.html">
       <PackagePath>wwwroot\index.html</PackagePath>
     </AppxPackagedFile>

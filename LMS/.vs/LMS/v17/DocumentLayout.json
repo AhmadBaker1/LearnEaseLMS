@@ -3,8 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D26A72F1-3A91-40FD-8B9C-C7D331172B32}|LMS.csproj|c:\\users\\ahmad baker\\onedrive\\desktop\\learneaselms\\lms\\components\\pages\\teachers.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D26A72F1-3A91-40FD-8B9C-C7D331172B32}|LMS.csproj|solutionrelative:components\\pages\\teachers.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D26A72F1-3A91-40FD-8B9C-C7D331172B32}|LMS.csproj|c:\\users\\ahmad baker\\onedrive\\desktop\\learneaselms\\lms\\components\\pages\\registration.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D26A72F1-3A91-40FD-8B9C-C7D331172B32}|LMS.csproj|solutionrelative:components\\pages\\registration.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D26A72F1-3A91-40FD-8B9C-C7D331172B32}|LMS.csproj|c:\\users\\ahmad baker\\onedrive\\desktop\\learneaselms\\lms\\components\\pages\\coursesearch.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D26A72F1-3A91-40FD-8B9C-C7D331172B32}|LMS.csproj|solutionrelative:components\\pages\\coursesearch.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D26A72F1-3A91-40FD-8B9C-C7D331172B32}|LMS.csproj|c:\\users\\ahmad baker\\onedrive\\desktop\\learneaselms\\lms\\components\\pages\\courses.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D26A72F1-3A91-40FD-8B9C-C7D331172B32}|LMS.csproj|solutionrelative:components\\pages\\courses.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D26A72F1-3A91-40FD-8B9C-C7D331172B32}|LMS.csproj|c:\\users\\ahmad baker\\onedrive\\desktop\\learneaselms\\lms\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D26A72F1-3A91-40FD-8B9C-C7D331172B32}|LMS.csproj|solutionrelative:components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D26A72F1-3A91-40FD-8B9C-C7D331172B32}|LMS.csproj|c:\\users\\ahmad baker\\onedrive\\desktop\\learneaselms\\lms\\models\\courses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D26A72F1-3A91-40FD-8B9C-C7D331172B32}|LMS.csproj|solutionrelative:models\\courses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D26A72F1-3A91-40FD-8B9C-C7D331172B32}|LMS.csproj|c:\\users\\ahmad baker\\onedrive\\desktop\\learneaselms\\lms\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -19,22 +39,6 @@
       "RelativeMoniker": "D:0:0:{D26A72F1-3A91-40FD-8B9C-C7D331172B32}|LMS.csproj|solutionrelative:mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D26A72F1-3A91-40FD-8B9C-C7D331172B32}|LMS.csproj|c:\\users\\ahmad baker\\onedrive\\desktop\\learneaselms\\lms\\models\\courses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D26A72F1-3A91-40FD-8B9C-C7D331172B32}|LMS.csproj|solutionrelative:models\\courses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D26A72F1-3A91-40FD-8B9C-C7D331172B32}|LMS.csproj|c:\\users\\ahmad baker\\onedrive\\desktop\\learneaselms\\lms\\components\\pages\\courses.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D26A72F1-3A91-40FD-8B9C-C7D331172B32}|LMS.csproj|solutionrelative:components\\pages\\courses.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D26A72F1-3A91-40FD-8B9C-C7D331172B32}|LMS.csproj|c:\\users\\ahmad baker\\onedrive\\desktop\\learneaselms\\lms\\components\\pages\\coursesearch.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D26A72F1-3A91-40FD-8B9C-C7D331172B32}|LMS.csproj|solutionrelative:components\\pages\\coursesearch.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D26A72F1-3A91-40FD-8B9C-C7D331172B32}|LMS.csproj|c:\\users\\ahmad baker\\onedrive\\desktop\\learneaselms\\lms\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D26A72F1-3A91-40FD-8B9C-C7D331172B32}|LMS.csproj|solutionrelative:components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D26A72F1-3A91-40FD-8B9C-C7D331172B32}|LMS.csproj|c:\\users\\ahmad baker\\onedrive\\desktop\\learneaselms\\lms\\components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D26A72F1-3A91-40FD-8B9C-C7D331172B32}|LMS.csproj|solutionrelative:components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -45,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D26A72F1-3A91-40FD-8B9C-C7D331172B32}|LMS.csproj|c:\\users\\ahmad baker\\onedrive\\desktop\\learneaselms\\lms\\models\\teachers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D26A72F1-3A91-40FD-8B9C-C7D331172B32}|LMS.csproj|solutionrelative:models\\teachers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D26A72F1-3A91-40FD-8B9C-C7D331172B32}|LMS.csproj|c:\\users\\ahmad baker\\onedrive\\desktop\\learneaselms\\lms\\components\\pages\\teachers.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D26A72F1-3A91-40FD-8B9C-C7D331172B32}|LMS.csproj|solutionrelative:components\\pages\\teachers.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D26A72F1-3A91-40FD-8B9C-C7D331172B32}|LMS.csproj|c:\\users\\ahmad baker\\onedrive\\desktop\\learneaselms\\lms\\models\\enrollment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,39 +78,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Registration.razor",
               "DocumentMoniker": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\Components\\Pages\\Registration.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\Registration.razor",
               "ToolTip": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\Components\\Pages\\Registration.razor",
               "RelativeToolTip": "Components\\Pages\\Registration.razor",
-              "ViewState": "AQIAAFYAAAAAAAAAAAAswGkAAAABAAAA",
+              "ViewState": "AQIAALkAAAAAAAAAAAAswMIAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-22T22:11:41.053Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "CourseSearch.razor",
               "DocumentMoniker": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\Components\\Pages\\CourseSearch.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\CourseSearch.razor",
               "ToolTip": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\Components\\Pages\\CourseSearch.razor",
               "RelativeToolTip": "Components\\Pages\\CourseSearch.razor",
-              "ViewState": "AQIAAIUAAAAAAAAAAAAAADMAAAAZAAAA",
+              "ViewState": "AQIAALUAAAAAAAAAAAAAABEBAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-11T19:37:49.748Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 0,
               "Title": "Teachers.razor",
               "DocumentMoniker": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\Components\\Pages\\Teachers.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\Teachers.razor",
               "ToolTip": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\Components\\Pages\\Teachers.razor",
               "RelativeToolTip": "Components\\Pages\\Teachers.razor",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAcwEUAAABIAAAA",
+              "ViewState": "AQIAALIAAAAAAAAAAAAAAMEAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-11T19:37:49.846Z",
               "EditorCaption": ""
@@ -129,7 +129,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "MauiProgram.cs",
               "DocumentMoniker": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\MauiProgram.cs",
               "RelativeDocumentMoniker": "MauiProgram.cs",
@@ -142,7 +142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "MainLayout.razor",
               "DocumentMoniker": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\Components\\Layout\\MainLayout.razor",
               "RelativeDocumentMoniker": "Components\\Layout\\MainLayout.razor",
@@ -155,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Counter.razor",
               "DocumentMoniker": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\Components\\Pages\\Counter.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\Counter.razor",
@@ -168,33 +168,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\Components\\Layout\\NavMenu.razor",
               "RelativeDocumentMoniker": "Components\\Layout\\NavMenu.razor",
               "ToolTip": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\Components\\Layout\\NavMenu.razor",
               "RelativeToolTip": "Components\\Layout\\NavMenu.razor",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAAB8AAAAGAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAIBZwB8AAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-11T19:37:49.877Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "Courses.razor",
               "DocumentMoniker": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\Components\\Pages\\Courses.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\Courses.razor",
               "ToolTip": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\Components\\Pages\\Courses.razor",
               "RelativeToolTip": "Components\\Pages\\Courses.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAfAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAIwBgAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-11T19:37:49.882Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Teachers.cs",
               "DocumentMoniker": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\Models\\Teachers.cs",
               "RelativeDocumentMoniker": "Models\\Teachers.cs",
@@ -207,7 +207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Students.cs",
               "DocumentMoniker": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\Models\\Students.cs",
               "RelativeDocumentMoniker": "Models\\Students.cs",
@@ -233,26 +233,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Courses.cs",
               "DocumentMoniker": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\Models\\Courses.cs",
               "RelativeDocumentMoniker": "Models\\Courses.cs",
               "ToolTip": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\Models\\Courses.cs",
               "RelativeToolTip": "Models\\Courses.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAcwBEAAAAuAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-11T19:37:49.905Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "Home.razor",
               "DocumentMoniker": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\Components\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\Home.razor",
               "ToolTip": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\Components\\Pages\\Home.razor",
               "RelativeToolTip": "Components\\Pages\\Home.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAIEAAAAAAAAAAAAAAIgAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-11T19:37:49.911Z",
               "EditorCaption": ""

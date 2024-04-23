@@ -5,16 +5,23 @@
 
 <p>Terms Open for Registration (Please read the important notice to students regarding Covid-19.)</p>
 
-<div class="term-selection">
-    <select @bind="selectedTerm">
-        <option value="">Select a term...</option>
-        @foreach (var term in terms)
-        {
-            <option value="@term">@term</option>
-        }
-    </select>
+<div class="container">
+    <h2 class="page-title">Select a Term</h2>
+    <p class="covid-notice">Terms Open for Registration <br>(Please read the important notice to students regarding Covid-19.)</p>
 
-    <button @onclick="Continue">Continue</button>
+    <div class="term-selection">
+        <div class="dropdown-container">
+            <select @bind="selectedTerm" class="term-dropdown">
+                <option value="">Select a term...</option>
+                @foreach (var term in terms)
+                {
+                    <option value="@term">@term</option>
+                }
+            </select>
+        </div>
+
+        <button @onclick="Continue" class="continue-btn">Continue</button>
+    </div>
 </div>
 
 
@@ -41,31 +48,65 @@
 }
 
 <style>
+    .container {
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .page-title {
+        color: #343a40; /* dark gray */
+        margin-bottom: 1rem;
+    }
+
+    .covid-notice {
+        font-size: 0.9rem;
+        color: #dc3545; /* bootstrap 'danger' red */
+        margin-bottom: 2rem;
+    }
+
     .term-selection {
         max-width: 400px;
         margin: 0 auto;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        overflow: hidden;
     }
 
-        .term-selection select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-        }
+    .dropdown-container {
+        margin-bottom: 1rem;
+        background: #f8f9fa; /* light gray background */
+        padding: 0.5rem;
+    }
 
-        .term-selection button {
-            width: 100%;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
+    .term-dropdown {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        background-color: white;
+        color: #495057;
+        font-size: 1rem;
+        margin-bottom: 0; /* Remove additional spacing */
+        -webkit-appearance: none; /* Remove default styling on iOS */
+        -moz-appearance: none; /* Remove default styling on Firefox */
+    }
 
-            .term-selection button:hover {
-                background-color: #45a049;
-            }
+    .continue-btn {
+        display: block;
+        width: 90%;
+        padding: 0.75rem;
+        margin: 0 auto 1rem auto;
+        background-color: #007bff; /* bootstrap 'primary' blue */
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.2s;
+    }
+
+        .continue-btn:hover, .continue-btn:focus {
+            background-color: #0056b3; /* darker blue */
+        }
 </style>

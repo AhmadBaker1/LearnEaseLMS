@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
+      "Id": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
       "Id": "C:\\Users\\Ahmad Baker\\OneDrive\\Desktop\\LearnEaseLMS\\LMS\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
